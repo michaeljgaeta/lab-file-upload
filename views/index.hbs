@@ -1,1 +1,9 @@
 <p>Welcome to our Lab!</p>
+<!--index is the list page-->
+{{#each posts}}
+  <article>
+    <small>Created by {{ creator.name }}</small>
+    <img src="{{ picture }}" />
+    <p>{{ message }}</p>
+  </article>
+{{/each}}

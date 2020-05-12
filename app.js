@@ -1,6 +1,7 @@
 const { join } = require('path');
 const express = require('express');
 const logger = require('morgan');
+
 const sassMiddleware = require('node-sass-middleware');
 
 const mongoose = require('mongoose');
@@ -9,9 +10,13 @@ const connectMongo = require('connect-mongo');
 
 const MongoStore = connectMongo(expressSession);
 
+//routers
 const indexRouter = require('./routes/index');
 const authenticationRouter = require('./routes/authentication');
+
+//models
 const User = require('./models/user');
+const Post = require('./models/post');
 
 const app = express();
 
